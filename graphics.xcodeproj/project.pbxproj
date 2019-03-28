@@ -10,6 +10,8 @@
 		FDC289D1224CA23B003DD431 /* HelloGraphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FDC289D0224CA23B003DD431 /* HelloGraphics.cpp */; };
 		FDC289D9224CA405003DD431 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC289D8224CA405003DD431 /* GLUT.framework */; };
 		FDC289DB224CA40F003DD431 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC289DA224CA40F003DD431 /* OpenGL.framework */; };
+		FDC289DE224CB523003DD431 /* DrawLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FDC289DC224CB523003DD431 /* DrawLine.cpp */; };
+		FDC289E2224CB774003DD431 /* DrawPoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FDC289E1224CB774003DD431 /* DrawPoint.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +31,12 @@
 		FDC289D0224CA23B003DD431 /* HelloGraphics.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HelloGraphics.cpp; sourceTree = "<group>"; };
 		FDC289D8224CA405003DD431 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		FDC289DA224CA40F003DD431 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		FDC289DC224CB523003DD431 /* DrawLine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DrawLine.cpp; sourceTree = "<group>"; };
+		FDC289DD224CB523003DD431 /* DrawLine.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DrawLine.hpp; sourceTree = "<group>"; };
+		FDC289DF224CB5CF003DD431 /* HelloGraphics.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HelloGraphics.hpp; sourceTree = "<group>"; };
+		FDC289E0224CB6FD003DD431 /* Global.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
+		FDC289E1224CB774003DD431 /* DrawPoint.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DrawPoint.cpp; sourceTree = "<group>"; };
+		FDC289E3224CB79F003DD431 /* DrawPoint.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DrawPoint.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +73,12 @@
 			isa = PBXGroup;
 			children = (
 				FDC289D0224CA23B003DD431 /* HelloGraphics.cpp */,
+				FDC289DF224CB5CF003DD431 /* HelloGraphics.hpp */,
+				FDC289E0224CB6FD003DD431 /* Global.h */,
+				FDC289E1224CB774003DD431 /* DrawPoint.cpp */,
+				FDC289E3224CB79F003DD431 /* DrawPoint.hpp */,
+				FDC289DC224CB523003DD431 /* DrawLine.cpp */,
+				FDC289DD224CB523003DD431 /* DrawLine.hpp */,
 			);
 			path = graphics;
 			sourceTree = "<group>";
@@ -135,6 +149,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDC289D1224CA23B003DD431 /* HelloGraphics.cpp in Sources */,
+				FDC289E2224CB774003DD431 /* DrawPoint.cpp in Sources */,
+				FDC289DE224CB523003DD431 /* DrawLine.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
