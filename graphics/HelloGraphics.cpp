@@ -17,6 +17,10 @@ const int WINDOW_SIZE_POS_Y = 100;
 const int WIDTH = 200;
 const int HEIGHT =  200;
 
+const int CORD_X0 = 50;
+const int CORD_Y0 = 50;
+const int CORD_X1 = 150;
+const int CORD_Y1 = 150;
 
 void display();
 
@@ -132,7 +136,7 @@ void drawLine(Point p0, Point p1, int choice){
     }
 }
 
-int prompt(){
+/*int prompt(){
     int option = 0; //default to err
     cout << "WELCOME TO HELLO GRAPHICS" <<endl;
     cout << "Pick an option number" << endl;
@@ -193,7 +197,7 @@ int prompt(){
     }
     
     return option;
-}
+}*/
 
 
 int main(int argc, char *argv[])
@@ -213,7 +217,11 @@ int main(int argc, char *argv[])
     glClearColor(0, 0, 0, 0); //clears the buffer of OpenGL
     
     
-    prompt();
+    
+    Point p1(CORD_X0, CORD_Y0);
+    Point p2(CORD_X1, CORD_Y1);
+    makePixel(p1,PixelBuffer, WIDTH, HEIGHT);
+    drawLine(p1,p2,1);
     
 
     
