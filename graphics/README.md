@@ -16,3 +16,8 @@ execute:
 ```sh
 $ ./a.out
 ```
+
+# Instructions for compiling on linux command line:
+```sh
+$ sudo apt-get install freeglut3-dev
+```
