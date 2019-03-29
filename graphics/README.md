@@ -1,4 +1,4 @@
-#Instructions for compiling on mac command line:
+# Instructions for compiling on mac command line:
 
 install homebrew if you dont already have it:
 ```sh
