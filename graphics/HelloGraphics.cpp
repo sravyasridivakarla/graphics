@@ -1,5 +1,5 @@
+#define GL_SILENCE_DEPRECATION
 #include <GL/glut.h>
-
 //#include <OpenGL/gl.h>
 //#include <OpenGL/glu.h>
 //#include <GLUT/glut.h>
@@ -33,7 +33,7 @@ public:
     //Color
     int r, g, b;
     
-    //default rgb
+    //Default rgb
     Point(int ex, int why){
         x = ex;
         y = why;
@@ -229,8 +229,8 @@ int main(int argc, char *argv[])
     
     //sets display function
     glutDisplayFunc(display);
-    
-    glutMainLoop();//main display loop, will display until terminate
+    //main display loop, will display until terminate
+    glutMainLoop();
     return 0;
 }
 
@@ -246,3 +246,4 @@ void display()
     //window refresh
     glFlush();
 }
+
