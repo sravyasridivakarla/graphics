@@ -17,11 +17,6 @@ const int WINDOW_SIZE_POS_Y = 100;
 const int WIDTH = 200;
 const int HEIGHT =  200;
 
-const int CORD_X0 = 50;
-const int CORD_Y0 = 50;
-const int CORD_X1 = 150;
-const int CORD_Y1 = 150;
-
 
 void display();
 
@@ -137,6 +132,69 @@ void drawLine(Point p0, Point p1, int choice){
     }
 }
 
+int prompt(){
+    int option = 0; //default to err
+    cout << "WELCOME TO HELLO GRAPHICS" <<endl;
+    cout << "Pick an option number" << endl;
+    cout << "1. Draw Point" << endl;
+    cout << "2. Draw Line" << endl;
+    cout << "3. Draw Shape" << endl;
+    cout << "4. EXIT" << endl <<endl;
+    cin >> option;
+    
+    if(option == 1){
+        Point p(-1,-1);
+        cout << "What is the X coordinate" << endl;
+        cin >> p.x;
+        cout << "What is the Y coordinate" << endl;
+        cin >> p.y;
+        
+        cout << p.x <<p.y <<endl;
+        
+        //checking out of bounds
+        if(!(p.x < 0 || p.x > WIDTH ||p.y < 0 || p.y > HEIGHT)){
+            cout << "BOUND ERROR" <<endl;
+            return 0;
+        }
+        makePixel(p,PixelBuffer, WIDTH, HEIGHT);
+    } else if ( option == 2 ){
+        Point p0(-1,-1);
+        cout << "1st endpoint:" << endl;
+        cout << "What is the X coordinate" << endl;
+        cin >> p0.x;
+        cout << "What is the Y coordinate" << endl;
+        cin >> p0.y;
+        if(!(p0.x < 0 || p0.x > WIDTH ||p0.y < 0 || p0.y > HEIGHT)){
+            cout << "BOUND ERROR" <<endl;
+            return 0;
+        }
+        Point p1(-1,-1);
+        cout << "2nd endpoint:" << endl;
+        cout << "What is the X coordinate" << endl;
+        cin >> p1.x;
+        cout << "What is the Y coordinate" << endl;
+        cin >> p1.y;
+        if(!(p1.x < 0 || p1.x > WIDTH ||p1.y < 0 || p1.y > HEIGHT)){
+            cout << "BOUND ERROR" <<endl;
+            return 0;
+        }
+        
+        int algo = 1;
+        cout << "Which algorithm do you want to use? (ENTER NUMBER)" << endl;
+        cout << "0. DDA" <<endl;
+        cout << "1. Breshenham" <<endl;
+        cin >> algo;
+        if(algo == 1){
+            drawLine(p0,p1,1);
+        } else {
+            drawLine(p0,p1,0);
+        }
+        
+    }
+    
+    return option;
+}
+
 
 int main(int argc, char *argv[])
 {
@@ -154,12 +212,10 @@ int main(int argc, char *argv[])
     int MainWindow = glutCreateWindow("Hello Graphics!!");
     glClearColor(0, 0, 0, 0); //clears the buffer of OpenGL
     
-    //draw the pixel with the right color
-    //p1(x0,y0) p2(x1,y1)
-    Point p1(CORD_X0, CORD_Y0);
-    Point p2(CORD_X1, CORD_Y1);
-    makePixel(p1,PixelBuffer, WIDTH, HEIGHT);
-    drawLine(p1,p2,1);
+    
+    prompt();
+    
+
     
     //sets display function
     glutDisplayFunc(display);
